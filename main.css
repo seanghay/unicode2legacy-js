@@ -1,8 +1,7 @@
 @font-face {
   font-family: LimonS2;
   font-display: block;  
-  block-timeout: .3;
-  src: url("lmns2.ttf") format("truetype");
+  src: url("lmns1.ttf") format("truetype");
 }
 
 * {
@@ -37,14 +36,22 @@ p {
 
 #preview {
   text-align: center;
-  
+  word-wrap: break-word;
 }
 
 .font-limon {
   font-weight: normal;
-  font-size: 32px;
+  font-size: 30px;
+  color: darkolivegreen;
   min-height: 44px;
   font-family: LimonS2, Inter, "Noto Serif Khmer", sans-serif;
+  line-height: 0;
+  padding: 0;
+  background-color: white;  
+}
+
+#text-output {
+background-color: white;
 }
 
 button {
