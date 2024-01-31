@@ -1,3 +1,4 @@
+import lottie from 'lottie-web';
 import Clipboard from 'clipboard';
 import { convert } from './reorder.js';
 
@@ -30,3 +31,11 @@ $el.buttonGenerate.addEventListener('click', () => {
   }, 2000);
 })
 
+
+lottie.loadAnimation({
+  container: $('#lottie-container'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: '/anim.json'
+});
