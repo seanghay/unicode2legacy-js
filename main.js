@@ -1,6 +1,6 @@
 import lottie from 'lottie-web';
 import Clipboard from 'clipboard';
-import { convert } from './reorder.js';
+import { limon as convert } from 'khmer-unicode-converter';
 
 
 /**
