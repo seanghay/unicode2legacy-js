@@ -113,3 +113,8 @@ input:focus {
 .gap {
   gap: 0.8rem;
 }
+
+
+a {
+  color: black;
+}
