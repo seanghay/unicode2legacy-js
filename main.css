@@ -1,7 +1,7 @@
 @font-face {
   font-family: LimonS2;
   font-display: block;  
-  src: url("lmns1.ttf") format("truetype");
+  src: url("/lmns1.ttf") format("truetype");
 }
 
 * {
