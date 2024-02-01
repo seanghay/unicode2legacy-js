@@ -12,8 +12,20 @@ const $el = {
   textInput: $("#text-input"),
   textOutput: $("#text-output"),
   buttonGenerate: $("#button-copy"),
-  preview: $("#preview")
+  preview: $("#preview"),
+  downloadTrigger: $("#download-trigger"),
+  fontDownload: $("#font-download")
 }
+
+$el.downloadTrigger.addEventListener('click', () => {
+  $el.fontDownload.classList.remove('hidden')
+})
+
+$el.fontDownload.addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
+    $el.fontDownload.classList.add('hidden');
+  }
+})
 
 new Clipboard('#button-copy');
 

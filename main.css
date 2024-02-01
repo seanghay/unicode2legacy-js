@@ -1,6 +1,6 @@
 @font-face {
   font-family: LimonS2;
-  font-display: block;  
+  font-display: block;
   src: url("/lmns1.ttf") format("truetype");
 }
 
@@ -47,11 +47,11 @@ p {
   font-family: LimonS2, Inter, "Noto Serif Khmer", sans-serif;
   line-height: 0;
   padding: 0;
-  background-color: white;  
+  background-color: white;
 }
 
 #text-output {
-background-color: white;
+  background-color: white;
 }
 
 button {
@@ -114,7 +114,41 @@ input:focus {
   gap: 0.8rem;
 }
 
+.gap-sm {
+  gap: 0.4rem;
+}
 
 a {
   color: black;
+}
+
+.modal {
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.modal-card {
+  background-color: white;
+  width: 320px;
+  height: 300px;
+  overflow-y: scroll;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
 }
