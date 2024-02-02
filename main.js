@@ -2,6 +2,50 @@ import lottie from 'lottie-web';
 import Clipboard from 'clipboard';
 import { limon as convert } from 'khmer-unicode-converter';
 
+const fonts = [
+  "/lmnf1.ttf",
+  "/lmnf2.ttf",
+  "/lmnf3.ttf",
+  "/lmnf4.ttf",
+  "/lmnf5.ttf",
+  "/lmnf6.ttf",
+  "/lmnf7.ttf",
+  "/lmnf8.ttf",
+  "/lmnr1.ttf",
+  "/lmnr2.ttf",
+  "/lmnr3.ttf",
+  "/lmnr4.ttf",
+  "/lmnr5.ttf",
+  "/lmns1.ttf",
+  "/lmns2.ttf",
+  "/lmns3.ttf",
+  "/lmns4.ttf",
+  "/lmns5.ttf",
+  "/lmns6.ttf",
+  "/lmns7.ttf",
+];
+
+let limonFontsAreLoaded = false;
+
+function loadLimonFonts() {
+  if (limonFontsAreLoaded) return;
+  let css = '';
+  for (const url of fonts) {
+    const family = url.slice(1, -4);
+    const fontface = new FontFace(family, `url(${url})`, {
+      style: "normal",
+      display: 'block',
+    });
+    css += `.${family} {font-family: ${family}, Inter, "Noto Serif Khmer", sans-serif; font-size: 2rem;}\n`
+    document.fonts.add(fontface);
+  }
+
+  const s = document.createElement('style');
+  s.innerHTML = css;
+  document.head.appendChild(s);
+  limonFontsAreLoaded = true;
+}
+
 
 /**
  * @returns {HTMLElement} 
@@ -18,7 +62,8 @@ const $el = {
 }
 
 $el.downloadTrigger.addEventListener('click', () => {
-  $el.fontDownload.classList.remove('hidden')
+  loadLimonFonts();
+  $el.fontDownload.classList.remove('hidden');
 })
 
 $el.fontDownload.addEventListener("click", (e) => {

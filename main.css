@@ -50,6 +50,7 @@ p {
   background-color: white;
 }
 
+
 #text-output {
   background-color: white;
 }
@@ -150,4 +151,8 @@ a {
 .hidden {
   visibility: hidden;
   display: none;
+}
+
+.modal-card p small {
+  color: gray;
 }
