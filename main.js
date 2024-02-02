@@ -36,7 +36,7 @@ function loadLimonFonts() {
       style: "normal",
       display: 'block',
     });
-    css += `.${family} {font-family: ${family}, Inter, "Noto Serif Khmer", sans-serif; font-size: 2rem;}\n`
+    css += `.${family} { color: #333; font-weight: normal; font-family: ${family}, Inter, "Noto Serif Khmer", sans-serif; font-size: 2.5rem;}\n`
     document.fonts.add(fontface);
   }
 
