@@ -88,7 +88,6 @@ $el.buttonGenerate.addEventListener('click', () => {
   }, 2000);
 })
 
-
 lottie.loadAnimation({
   container: $('#lottie-container'),
   renderer: 'svg',
