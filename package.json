@@ -7,7 +7,7 @@
   "dependencies": {
     "clipboard": "^2.0.11",
     "khmer-normalizer": "^1.0.2",
-    "khmer-unicode-converter": "^0.0.6",
+    "khmer-unicode-converter": "^0.0.8",
     "lottie-web": "^5.12.2",
     "vite": "latest"
   }
